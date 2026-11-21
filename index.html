@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <title>Лабораторна 4</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="header">
+    <button id="themeToggle" class="btn">🌙</button>
+  </header>
+
+  <section id="reviews">
+    <h2>Відгуки попередніх роботодавців</h2>
+    <div id="reviewsStatus">Завантаження...</div>
+    <div id="reviewsList" class="reviews"></div>
+  </section>
+
+  <!-- Модальне вікно (з'явиться через 1 хв) -->
+  <div id="modal" class="modal" hidden>
+    <div class="modal-content">
+      <button id="modalClose">×</button>
+      <h2>Зворотний зв'язок</h2>
+      <form action="https://formspree.io/f/YOUR_ENDPOINT" method="POST">
+        <label>Ім’я <input type="text" name="name" required></label>
+        <label>Email <input type="email" name="email" required></label>
+        <label>Номер телефону <input type="tel" name="phone" required></label>
+        <label>Повідомлення <textarea name="message" rows="4" required></textarea></label>
+        <button type="submit" class="btn">Надіслати</button>
+      </form>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <h3>Інформація про систему (localStorage)</h3>
+    <ul id="storageInfo"></ul>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
